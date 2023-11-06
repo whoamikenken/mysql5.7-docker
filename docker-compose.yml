@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  db:
+    build:
+      context: ./           # Path to the directory containing the Dockerfile
+      dockerfile: Dockerfile # Name of the Dockerfile
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - 33025:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: passwrd
+      MYSQL_DATABASE: test
+      MYSQL_USER: developer
+      MYSQL_PASSWORD: passwrd
