@@ -1,5 +1,6 @@
 FROM mysql:5.7
 
+COPY ./docker/my.cnf /etc/mysql/conf.d/my.cnf
 # COPY ./docker/mysql/init.sql /docker-entrypoint-initdb.d/init.sql
 
 # ENV MYSQL_ROOT_PASSWORD=PT1K3n2022
